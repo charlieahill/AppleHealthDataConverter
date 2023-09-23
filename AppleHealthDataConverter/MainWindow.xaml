@@ -1,0 +1,26 @@
+﻿<Window x:Class="AppleHealthDataConverter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AppleHealthDataConverter"
+        mc:Ignorable="d"
+        Title="Apple Health Data Viewer" Height="450" Width="800">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Button Grid.Row="0" Margin="0 10 0 10" Click="LoadDataButton_Click">Load Data from File</Button>
+        <DockPanel Grid.Row="1" Margin="0 0 0 10">
+        <TextBlock TextWrapping="Wrap">This software is designed to take weight information out of Apple health - and output it as a csv that can be integrated into my Excel record. To use it go to Apple health and Export all health data (Health App --> Click on profile icon top right --> Export All Health Data), transfer it to myself (email or icloud) and then load it into this program.</TextBlock>
+        </DockPanel>
+        <DockPanel Grid.Row="2" Margin="0 0 0 10">
+        <TextBlock TextWrapping="Wrap">Ultimate goal is to massively improve the functionality when I finally design my organiser.</TextBlock>
+        </DockPanel>
+        <TextBox Name="ProgramOutputTextBox" Grid.Row="3" VerticalScrollBarVisibility="Auto"/>
+    </Grid>
+</Window>
